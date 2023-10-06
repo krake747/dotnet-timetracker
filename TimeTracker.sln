@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.App", "TimeTracker.App\TimeTracker.App.csproj", "{16D8DFE9-FFDE-4EE2-AD76-BCFE7F8DB755}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E499A848-F4DA-47F8-BE88-91DEEEE6AA8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{8EB4B3F0-BDB0-43E2-8C3F-75222078BF4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.App", "src\TimeTracker.App\TimeTracker.App.csproj", "{E67E7AA7-AA2F-4785-AD2F-FD2B3A6DFE0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +12,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{16D8DFE9-FFDE-4EE2-AD76-BCFE7F8DB755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16D8DFE9-FFDE-4EE2-AD76-BCFE7F8DB755}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16D8DFE9-FFDE-4EE2-AD76-BCFE7F8DB755}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16D8DFE9-FFDE-4EE2-AD76-BCFE7F8DB755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E67E7AA7-AA2F-4785-AD2F-FD2B3A6DFE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67E7AA7-AA2F-4785-AD2F-FD2B3A6DFE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67E7AA7-AA2F-4785-AD2F-FD2B3A6DFE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67E7AA7-AA2F-4785-AD2F-FD2B3A6DFE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E67E7AA7-AA2F-4785-AD2F-FD2B3A6DFE0E} = {E499A848-F4DA-47F8-BE88-91DEEEE6AA8B}
 	EndGlobalSection
 EndGlobal
