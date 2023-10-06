@@ -5,13 +5,44 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        
+        <IsPackable>true</IsPackable>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>timetracker</ToolCommandName>
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+
+        <Version>0.0.1</Version>
+        <Authors>Kevin Kraemer</Authors>
+        <Description>.NET Time Tracking Cli App</Description>
+        <PackageTags>cli tool, console, sqlite</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReleaseNotes>CHANGELOG.md</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Include="..\..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="\"/>
+        <None Include="..\..\CHANGELOG.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Content Include="..\..\.dockerignore" Pack="false">
+            <Link>.dockerignore</Link>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Dapper" Version="2.1.4"/>
+        <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0-rc.1.23419.6"/>
+        <PackageReference Include="Spectre.Console" Version="0.47.0"/>
+        <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="nupkg\" />
     </ItemGroup>
 
 </Project>
