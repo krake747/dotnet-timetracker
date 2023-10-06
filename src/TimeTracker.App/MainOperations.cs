@@ -9,9 +9,9 @@ namespace TimeTracker.App;
 internal static class MainOperations
 {
     internal static void CreateNewActivityHandler(
-        ActivityRepository activityRepository, 
+        ActivityRepository activityRepository,
         SystemDateTimeProvider dateTimeProvider,
-        double hours, 
+        double hours,
         string activity)
     {
         var today = dateTimeProvider.Today;

@@ -1,5 +1,4 @@
-﻿
-using System.CommandLine;
+﻿using System.CommandLine;
 using System.CommandLine.Builder;
 using System.CommandLine.Parsing;
 using Dapper;
@@ -45,8 +44,8 @@ var rootCommand = new RootCommand("Crate a new time tracking activity")
     activityOption
 };
 
-rootCommand.SetHandler(MainOperations.CreateNewActivityHandler, 
-    activityRepositoryBinder, 
+rootCommand.SetHandler(MainOperations.CreateNewActivityHandler,
+    activityRepositoryBinder,
     systemDateTimeProviderBinder,
     hoursOption,
     activityOption);
@@ -60,4 +59,3 @@ commandLineBuilder.UseDefaults();
 var parser = commandLineBuilder.Build();
 
 await parser.InvokeAsync(args);
-

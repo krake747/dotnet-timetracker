@@ -17,10 +17,10 @@ internal static class SetupOperations
             return new ConnectionString(timeTrackerDbFullPath);
         }
 
-        _ = Directory.CreateDirectory(Path.Combine(userDirectoryInfo.FullName, databasePath)); 
+        _ = Directory.CreateDirectory(Path.Combine(userDirectoryInfo.FullName, databasePath));
         return new ConnectionString(timeTrackerDbFullPath);
     }
-    
+
     internal static void CreateLocalDbIfNotExists(string timeTrackerDbFullPath)
     {
         if (File.Exists(timeTrackerDbFullPath))

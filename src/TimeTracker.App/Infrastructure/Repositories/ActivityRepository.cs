@@ -26,11 +26,11 @@ internal sealed class ActivityRepository(DbConnectionFactory connectionFactory)
         // lang=sqlite
         var getAllQuery = new CommandDefinition(
             $"""
-            SELECT a.[Id], a.[Date], a.[Hours], a.[Description]
-            FROM Activities a
-            ORDER BY a.[Id] {(query.Ordering is Ordering.Ascending ? "ASC" : "DESC")}
-            LIMIT @Limit
-            """, new { query.Limit });
+             SELECT a.[Id], a.[Date], a.[Hours], a.[Description]
+             FROM Activities a
+             ORDER BY a.[Id] {(query.Ordering is Ordering.Ascending ? "ASC" : "DESC")}
+             LIMIT @Limit
+             """, new { query.Limit });
 
         var results = connection.Query<Activity>(getAllQuery);
         return results;

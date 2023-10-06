@@ -5,9 +5,9 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        
+
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        
+
         <IsPackable>true</IsPackable>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>timetracker</ToolCommandName>
@@ -27,7 +27,7 @@
         <None Include="..\..\LICENSE" Pack="true" PackagePath="\"/>
         <None Include="..\..\CHANGELOG.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
-    
+
     <ItemGroup>
         <Content Include="..\..\.dockerignore" Pack="false">
             <Link>.dockerignore</Link>
@@ -42,7 +42,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="nupkg\" />
+        <Folder Include="nupkg\"/>
     </ItemGroup>
 
 </Project>
