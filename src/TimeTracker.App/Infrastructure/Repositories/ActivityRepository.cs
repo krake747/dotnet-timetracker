@@ -8,7 +8,7 @@ namespace TimeTracker.App.Infrastructure.Repositories;
 
 internal sealed class ActivityRepository(DbConnectionFactory connectionFactory)
 {
-    internal bool CreateTimeRecord(CreateActivityCommand command)
+    internal bool CreateActivity(CreateActivityCommand command)
     {
         using var connection = connectionFactory.CreateConnection();
         // lang=sqlite

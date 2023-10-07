@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 to [Semantic Versioning](http://semver.org/) with further explanations are found here in this
 blog post [Go Make Things](https://gomakethings.com/semantic-versioning/).
 
+## [0.0.2] - 2023-11-06
+
+### Fixed
+
+- Rename `CreateTimeRecord` &rarr; `CreateActivity`
+
+### Added
+
+- Add `IDateTimeProvider` interface
+
+### Removed
+
+- Remove `ConnectionString` record
+
 ## [0.0.1] - 2023-10-06
 
 ### Added

@@ -1,12 +1,11 @@
 ﻿using TimeTracker.App.Domain.Extensions;
-using TimeTracker.App.Infrastructure.Common;
 using TimeTracker.App.Infrastructure.Database;
 
 namespace TimeTracker.App;
 
 internal static class SetupOperations
 {
-    internal static ConnectionString CreateDatabasePath(string databasePath, string database)
+    internal static string CreateDatabasePath(string databasePath, string database)
     {
         var userDirectoryInfo = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
             .Pipe(Directory.CreateDirectory);
@@ -14,11 +13,11 @@ internal static class SetupOperations
         var timeTrackerDbFullPath = Path.Combine(userDirectoryInfo.FullName, databasePath, database);
         if (File.Exists(timeTrackerDbFullPath))
         {
-            return new ConnectionString(timeTrackerDbFullPath);
+            return timeTrackerDbFullPath;
         }
 
         _ = Directory.CreateDirectory(Path.Combine(userDirectoryInfo.FullName, databasePath));
-        return new ConnectionString(timeTrackerDbFullPath);
+        return timeTrackerDbFullPath;
     }
 
     internal static void CreateLocalDbIfNotExists(string timeTrackerDbFullPath)

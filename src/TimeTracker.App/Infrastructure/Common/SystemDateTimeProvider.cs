@@ -1,6 +1,8 @@
-﻿namespace TimeTracker.App.Infrastructure.Common;
+﻿using TimeTracker.App.Infrastructure.Common.Interfaces;
 
-internal sealed class SystemDateTimeProvider
+namespace TimeTracker.App.Infrastructure.Common;
+
+internal sealed class SystemDateTimeProvider : IDateTimeProvider
 {
-    internal DateOnly Today => DateOnly.FromDateTime(DateTime.Today);
+    public DateOnly Today => DateOnly.FromDateTime(DateTime.Today);
 }

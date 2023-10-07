@@ -11,7 +11,7 @@ Console.WriteLine("Hello, TimeTracker App!");
 
 const string timeTrackerDb = "TimeTracker.db";
 const string databaseFolder = @"TimeTrackerApp\database";
-var databaseFullPath = SetupOperations.CreateDatabasePath(databaseFolder, timeTrackerDb).Value;
+var databaseFullPath = SetupOperations.CreateDatabasePath(databaseFolder, timeTrackerDb);
 SetupOperations.CreateLocalDbIfNotExists(databaseFullPath);
 
 var connectionString = $"Data Source={databaseFullPath}";
