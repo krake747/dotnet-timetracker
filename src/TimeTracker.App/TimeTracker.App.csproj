@@ -13,7 +13,7 @@
         <ToolCommandName>timetracker</ToolCommandName>
         <PackageOutputPath>./nupkg</PackageOutputPath>
 
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Authors>Kevin Kraemer</Authors>
         <Description>.NET Time Tracking Cli App</Description>
         <PackageTags>cli tool, console, sqlite</PackageTags>
